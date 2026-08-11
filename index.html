@@ -512,6 +512,46 @@
     font-size:.95rem;
   }
 
+  /* ===== PONTA MERIT GRID ===== */
+    .ponta-merit-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 1.25rem 0;
+    }
+    .ponta-merit-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      transition: box-shadow 0.15s;
+    }
+    .ponta-merit-card:hover { box-shadow: var(--shadow); }
+    .ponta-merit-card--accent {
+      border-color: var(--green);
+      background: var(--green-light);
+    }
+    .ponta-merit-icon {
+      font-size: 26px;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .ponta-merit-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 3px;
+    }
+    .ponta-merit-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
   /* ---------- FINAL CTA ---------- */
   .cta-band{
     background:linear-gradient(135deg, var(--teal) 0%, var(--teal-deep) 100%);
@@ -788,6 +828,53 @@
       </div>
     </div>
   </section>
+
+  <!-- SECTION 4: 関連ページ -->
+    <section class="section" id="related" aria-labelledby="related-heading">
+      <div class="section-label">関連ページ</div>
+      <h2 id="related-heading">あわせて読みたい記事</h2>
+      <div class="ponta-merit-grid">
+        <div class="ponta-merit-card">
+          <div class="ponta-merit-body">
+            <a href="https://singlelifestyle.github.io/menu-coupon/" target="_blank">
+            <div class="ponta-merit-title">【menu】初回登録で合計6,800円分の割引クーポン配布中</div></a>
+          </div>
+        </div>
+      </div>
+      <div class="ponta-merit-grid">
+        <div class="ponta-merit-card">
+          <div class="ponta-merit-body">
+            <a href="https://singlelifestyle.github.io/disposable-vape-recommended/" target="_blank">
+            <div class="ponta-merit-title">【2026年最新】使い捨て電子タバコのおすすめ商品｜持ち運びシーシャ完全ガイド</div></a>
+          </div>
+        </div>
+      </div>
+      <div class="ponta-merit-grid">
+        <div class="ponta-merit-card">
+          <div class="ponta-merit-body">
+            <a href="https://singlelifestyle.github.io/pod-liquid-vape/" target="_blank">
+            <div class="ponta-merit-title">【2026年最新】PODカートリッジ式電子タバコのおすすめ商品｜持ち運びシーシャ</div></a>
+          </div>
+        </div>
+      </div>
+      <div class="ponta-merit-grid">
+        <div class="ponta-merit-card">
+          <div class="ponta-merit-body">
+            <a href="https://singlelifestyle.github.io/savings-mobile/" target="_blank">
+            <div class="ponta-merit-title">【節約術】固定費の見直しが最強｜スマホ代を楽天モバイルで年間48,000円節約</div></a>
+          </div>
+        </div>
+      </div>
+      <div class="ponta-merit-grid">
+        <div class="ponta-merit-card">
+          <div class="ponta-merit-body">
+            <a href="https://singlelifestyle.github.io/large-scale-IPO/" target="_blank">
+            <div class="ponta-merit-title">【超大型IPO】公募価格で購入できるチャンスを見逃すな｜楽天証券での申し込みが簡単でおすすめ</div></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <a href="https://hb.afl.rakuten.co.jp/hsc/5516f9d0.4a96e2cc.51e92a2c.2aa3a911/?link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiIzOCIsImJhbiI6MjQ3NTEzNywiYW1wIjpmYWxzZX0%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hsb/5516f9d0.4a96e2cc.51e92a2c.2aa3a911/?me_id=2100001&me_adv_id=2475137&t=pict" border="0" style="margin:2px" alt="" title=""></a>
 
   <!-- ================= 最終CTA ================= -->
   <section class="cta-band" aria-labelledby="cta-title">
