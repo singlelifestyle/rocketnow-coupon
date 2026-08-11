@@ -512,45 +512,65 @@
     font-size:.95rem;
   }
 
-  /* ===== PONTA MERIT GRID ===== */
-    .ponta-merit-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin: 1.25rem 0;
-    }
-    .ponta-merit-card {
-      background: var(--white);
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 1rem 1.25rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      transition: box-shadow 0.15s;
-    }
-    .ponta-merit-card:hover { box-shadow: var(--shadow); }
-    .ponta-merit-card--accent {
-      border-color: var(--green);
-      background: var(--green-light);
-    }
-    .ponta-merit-icon {
-      font-size: 26px;
-      line-height: 1;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-    .ponta-merit-title {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 3px;
-    }
-    .ponta-merit-desc {
-      font-size: 13px;
-      color: var(--text-secondary);
-      line-height: 1.65;
-    }
+  /* ---------- 関連ページ ---------- */
+  .related-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:22px;
+  }
+  .related-card{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:24px 22px;
+    text-decoration:none;
+    color:var(--ink);
+    transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .related-card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow);
+    border-color:transparent;
+  }
+  .related-card .tag{
+    display:inline-flex;
+    align-self:flex-start;
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:.04em;
+    color:var(--teal);
+    background:var(--kraft);
+    padding:4px 10px;
+    border-radius:999px;
+  }
+  .related-card h3{
+    font-size:1.02rem;
+    font-weight:700;
+    margin:0;
+    color:var(--ink);
+  }
+  .related-card p{
+    margin:0;
+    font-size:.88rem;
+    color:var(--ink-soft);
+    flex-grow:1;
+  }
+  .related-card .go{
+    font-family:"JetBrains Mono", monospace;
+    font-size:.8rem;
+    font-weight:700;
+    color:var(--coral);
+  }
+
+  @media (max-width:860px){
+    .related-grid{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width:640px){
+    .related-grid{ grid-template-columns:1fr; }
+  }
 
   /* ---------- FINAL CTA ---------- */
   .cta-band{
@@ -829,51 +849,43 @@
     </div>
   </section>
 
-  <!-- SECTION 4: 関連ページ -->
-    <section class="section" id="related" aria-labelledby="related-heading">
-      <div class="section-label">関連ページ</div>
-      <h2 id="related-heading">あわせて読みたい記事</h2>
-      <div class="ponta-merit-grid">
-        <div class="ponta-merit-card">
-          <div class="ponta-merit-body">
-            <a href="https://singlelifestyle.github.io/menu-coupon/" target="_blank">
-            <div class="ponta-merit-title">【menu】初回登録で合計6,800円分の割引クーポン配布中</div></a>
-          </div>
-        </div>
+  <!-- ================= 関連ページ ================= -->
+  <section class="alt" aria-labelledby="related-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">RELATED</span>
+        <h2 id="related-title">関連ページ</h2>
       </div>
-      <div class="ponta-merit-grid">
-        <div class="ponta-merit-card">
-          <div class="ponta-merit-body">
-            <a href="https://singlelifestyle.github.io/disposable-vape-recommended/" target="_blank">
-            <div class="ponta-merit-title">【2026年最新】使い捨て電子タバコのおすすめ商品｜持ち運びシーシャ完全ガイド</div></a>
-          </div>
-        </div>
+
+      <div class="related-grid">
+        <a class="related-card" href="https://singlelifestyle.github.io/menu-coupon/">
+          <span class="tag">お得クーポン</span>
+          <h3>【menu】初回登録で合計6,800円分の割引クーポン配布中</h3>
+          <span class="go">続きを読む &rarr;</span>
+        </a>
+        <a class="related-card" href="https://singlelifestyle.github.io/disposable-vape-recommended/">
+          <span class="tag">使い捨て電子タバコ</span>
+          <h3>【2026年最新】使い捨て電子タバコのおすすめ商品｜持ち運びシーシャ完全ガイド</h3>
+          <span class="go">続きを読む &rarr;</span>
+        </a>
+        <a class="related-card" href="https://singlelifestyle.github.io/pod-liquid-vape/">
+          <span class="tag">PODカートリッジ式電子タバコ</span>
+          <h3>【2026年最新】PODカートリッジ式電子タバコのおすすめ商品｜持ち運びシーシャ</h3>
+          <span class="go">続きを読む &rarr;</span>
+        </a>
+        <a class="related-card" href="https://singlelifestyle.github.io/savings-mobile/">
+          <span class="tag">節約術</span>
+          <h3>【節約術】固定費の見直しが最強｜スマホ代を楽天モバイルで年間48,000円節約</h3>
+          <span class="go">続きを読む &rarr;</span>
+        </a>
+        <a class="related-card" href="https://singlelifestyle.github.io/large-scale-IPO/">
+          <span class="tag">超大型IPO</span>
+          <h3>【超大型IPO】公募価格で購入できるチャンスを見逃すな｜楽天証券での申し込みが簡単でおすすめ</h3>
+          <span class="go">続きを読む &rarr;</span>
+        </a>
       </div>
-      <div class="ponta-merit-grid">
-        <div class="ponta-merit-card">
-          <div class="ponta-merit-body">
-            <a href="https://singlelifestyle.github.io/pod-liquid-vape/" target="_blank">
-            <div class="ponta-merit-title">【2026年最新】PODカートリッジ式電子タバコのおすすめ商品｜持ち運びシーシャ</div></a>
-          </div>
-        </div>
-      </div>
-      <div class="ponta-merit-grid">
-        <div class="ponta-merit-card">
-          <div class="ponta-merit-body">
-            <a href="https://singlelifestyle.github.io/savings-mobile/" target="_blank">
-            <div class="ponta-merit-title">【節約術】固定費の見直しが最強｜スマホ代を楽天モバイルで年間48,000円節約</div></a>
-          </div>
-        </div>
-      </div>
-      <div class="ponta-merit-grid">
-        <div class="ponta-merit-card">
-          <div class="ponta-merit-body">
-            <a href="https://singlelifestyle.github.io/large-scale-IPO/" target="_blank">
-            <div class="ponta-merit-title">【超大型IPO】公募価格で購入できるチャンスを見逃すな｜楽天証券での申し込みが簡単でおすすめ</div></a>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
     <a href="https://hb.afl.rakuten.co.jp/hsc/5516f9d0.4a96e2cc.51e92a2c.2aa3a911/?link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiIzOCIsImJhbiI6MjQ3NTEzNywiYW1wIjpmYWxzZX0%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hsb/5516f9d0.4a96e2cc.51e92a2c.2aa3a911/?me_id=2100001&me_adv_id=2475137&t=pict" border="0" style="margin:2px" alt="" title=""></a>
 
   <!-- ================= 最終CTA ================= -->
